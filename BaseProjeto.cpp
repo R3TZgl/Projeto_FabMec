@@ -61,10 +61,10 @@ void setup(){
 
 
 void loop(){
-    if(digitalRead(btn1) == HIGH && escolha > 1){
+    if(digitalRead(btn1) == HIGH && num > 1){
         num -= 1;
     }
-    else if(digitalRead(btn2) == HIGH && escolha < 6){
+    else if(digitalRead(btn2) == HIGH && num < 6){
         num +- 1;
     }
     
@@ -98,13 +98,13 @@ void loop(){
     
     if(som > 300){
         digitalWrite(led, HIGH);
-        delay(200);
+        delay(50);
     }else{
         digitalWrite(led, LOW);
     }
     
     if(btn3 == HIGH){
         angulo = nota(escolha, frequencia, som, angulo);
+        delay(1000);
     }
-    delay(1000);
 }
