@@ -17,6 +17,12 @@ const int d = 146;
 const int a = 110;
 const int E = 82;
 
+const int btn1 = 2;
+const int btn2 = 3;
+const int btn3 = 4;
+int num = 1;
+
+
 void nota(nota, frequencia, som, angulo){
     while(!(nota - 2) < frequencia < (nota + 2){
         if(som > 300){
@@ -46,10 +52,40 @@ void setup(){
     pinMode(led, OUTPUT);
     
     servo.attach(12);
+    servo.write(0);
+    
+    pinMode(btn1, INPUT);
+    pinMode(btn2, INPUT);
+    pinMode(btn3, INPUT);
 }
 
 
 void loop(){
+    if(digitalRead(btn1) == HIGH && escolha > 1){
+        num -= 1;
+    }
+    else if(digitalRead(btn2) == HIGH && escolha < 6){
+        num +- 1;
+    }
+    
+    if(num == 1){
+        escolha = e;
+    }
+    else if(num == 2){
+        escolha = b;
+    }
+    else if(num == 3){
+        escolha = g;
+    }
+    else if(num == 4){
+        escolha = d;
+    }
+    else if(num == 5){
+        escolha = a;
+    }else{
+        escolha = E;
+    }
+    
     float frequencia = meter.getFrequency();
     if(frequencia > 0){
         print(frequencia);
@@ -67,5 +103,8 @@ void loop(){
         digitalWrite(led, LOW);
     }
     
-    angulo = nota(e, frequencia, som, angulo);
+    if(btn3 == HIGH){
+        angulo = nota(escolha, frequencia, som, angulo);
+    }
+    delay(1000);
 }
