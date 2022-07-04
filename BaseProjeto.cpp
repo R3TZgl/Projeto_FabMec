@@ -1,11 +1,12 @@
 #include <AudioFrequencyMeter.h>
 #include <Servo.h>
+#include <LiquidCrystal.h>
 
 
 AudioFrequencyMeter meter;
 
-const int sensor = 10;
-const int led = 11;
+const int sensor = 12;
+const int led = 13;
 
 Servo servo;
 int angulo = 0;
@@ -21,6 +22,8 @@ const int btn1 = 2;
 const int btn2 = 3;
 const int btn3 = 4;
 int num = 1;
+
+LiquidCrystal lcd(12, 11, 5, 6, ,7 ,8);
 
 
 void nota(nota, frequencia, som, angulo){
@@ -57,6 +60,10 @@ void setup(){
     pinMode(btn1, INPUT);
     pinMode(btn2, INPUT);
     pinMode(btn3, INPUT);
+    
+    lcd.begin(16, 2);
+    lcd.setUp(0, 0);
+    lcd.print("Teste");
 }
 
 
