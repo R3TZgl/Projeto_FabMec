@@ -1,6 +1,7 @@
 #include <AudioFrequencyMeter.h>
 #include <Servo.h>
 #include <LiquidCrystal.h>
+#include <strings>
 
 
 AudioFrequencyMeter meter;
@@ -24,6 +25,7 @@ const int btn3 = 4;
 int num = 1;
 
 LiquidCrystal lcd(9, 10, 5, 6, ,7 ,8);
+string textoCima;
 
 
 void nota(nota, frequencia, som, angulo){
