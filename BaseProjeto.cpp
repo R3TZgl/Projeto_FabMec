@@ -23,7 +23,7 @@ const int btn2 = 3;
 const int btn3 = 4;
 int num = 1;
 
-LiquidCrystal lcd(12, 11, 5, 6, ,7 ,8);
+LiquidCrystal lcd(9, 10, 5, 6, ,7 ,8);
 
 
 void nota(nota, frequencia, som, angulo){
@@ -54,7 +54,7 @@ void setup(){
     pinMode(sensor, INPUT);
     pinMode(led, OUTPUT);
     
-    servo.attach(12);
+    servo.attach(11);
     servo.write(0);
     
     pinMode(btn1, INPUT);
