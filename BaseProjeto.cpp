@@ -1,7 +1,6 @@
 #include <AudioFrequencyMeter.h>
 #include <Servo.h>
 #include <LiquidCrystal.h>
-#include <strings>
 
 
 AudioFrequencyMeter meter;
@@ -24,12 +23,11 @@ const int btn2 = 3;
 const int btn3 = 4;
 int num = 1;
 
-LiquidCrystal lcd(9, 10, 5, 6, ,7 ,8);
-string textoCima;
+LiquidCrystal lcd(9, 10, A2, A3, A4 ,A5);
 
 
 void nota(nota, frequencia, som, angulo){
-    while(!(nota - 2) < frequencia < (nota + 2){
+    while(!(nota - 2) < frequencia < (nota + 2)){
         if(som > 300){
             while(frequencia < nota - 2){
                 // da pra simplificar só com o if
