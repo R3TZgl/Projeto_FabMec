@@ -3,8 +3,8 @@ int valorSensor = 0;
 int ledAzul = 3;
 int ledVermelho = 2;
 int buzzer = 4;
-int nota1 = 300;
-int nota2 = 600;
+int nota1 = 1200;
+int nota2 = 2000;
 int transistor = 5;
 
 void setup()
